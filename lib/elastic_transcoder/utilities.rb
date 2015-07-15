@@ -25,7 +25,7 @@ module ElasticTranscoder
       HTTParty.get url, :headers=>headers
     end
     def execute_post url, headers, body
-      HTTParty.post url, :body=>body, :headers=>headers
+      HTTParty.post url, :body=>body.to_json, :headers=>headers
     end
     
     def execute_delete url, headers
